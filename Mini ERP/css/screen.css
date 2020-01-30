@@ -1,0 +1,12 @@
+body{
+    background:lightblue;
+}
+form{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+input{
+    padding:0.5rem;
+    margin:0.5rem;
+}
