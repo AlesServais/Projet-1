@@ -98,6 +98,7 @@ h1 {
     margin:1rem;
     box-shadow:2px 2px;
     background: lightgrey;
+    border-top-left-radius: 20px;
 }
 .img_carte{
     display:flex;
@@ -121,7 +122,7 @@ form{
     padding:0.5rem;
     background: #0e7a88;
     box-shadow: 2px 2px;
-    border-top-left-radius: 5px;
+    border-top-left-radius: 10px;
 }
 .Form_place{
     margin:0.5rem;
