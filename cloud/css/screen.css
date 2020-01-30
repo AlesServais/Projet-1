@@ -1,0 +1,197 @@
+/* ajoute la propriété transition-duration au bon endroit 
+pour avoir une animation de couleur quand on passe en survol */
+
+html {
+    font-size: 14px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Cantana, sans-serif;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+.bandeau {
+    width: 100%;
+    height: 25rem;
+    background: url('../images/sheep.png') bottom center no-repeat, url('../images/clouds.png') 115% center repeat-x, #00bcd2;
+    background-size: 25rem auto, auto 25rem;
+    animation-name: example;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    position: relative;
+}
+.l-main-ham.is-active{
+    background: red;
+}
+
+
+.l-main-header h1 {
+    color: black;
+    text-shadow: 2px 2px 0px #fff, 5px 4px 0px rgba(60,60,60,0.15);
+    position: absolute;
+    bottom: 3rem;
+    left: 3rem;
+}
+
+.animation {
+    width: 100px;
+    height: 100px;
+    background: red;
+    animation: masuperanimation 2s infinite;
+}
+
+@keyframes example {
+    from {
+        background-position: bottom center, 100% center;
+    }
+    to {
+        background-position: bottom center, 0 center;
+    }
+}
+
+/** Menu **/
+.l-main-nav {
+    display: none;
+    background-color:#06AFC3;
+}
+
+.l-main-nav li {
+    display: block;
+}
+
+.l-main-nav a,
+.l-main-ham {
+    display: block;
+    color: black;
+    background-color:#00bcd5;
+    text-decoration: none;
+    padding: 1rem;
+    text-align: center;
+}
+
+.l-main-ham {
+    text-align: right;
+}
+
+.l-main-ham img {
+    width: 1rem;
+}
+
+.l-main-ham.is-active {
+    background: #00bcd5;
+}
+
+.l-main-nav.is-active {
+    display: block;
+}
+
+.colonne{
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    padding:2rem;
+    margin:1rem;
+    box-shadow:2px 2px;
+    background: lightgrey;
+}
+.img_carte{
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    margin:1.5rem;
+    padding: 1.5rem;;
+}
+.formulaire{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding:2rem;
+    margin:1rem;
+}
+.formulaire h2{
+    display: flex;
+    align-items: center;
+}
+form{
+    padding:0.5rem;
+    background: #0e7a88;
+    box-shadow: 2px 2px;
+    border-top-left-radius: 5px;
+}
+.Form_place{
+    margin:0.5rem;
+    display:flex;
+    align-content: center;
+}
+input{
+    color:#0c7481;
+    background:#fff;
+    box-shadow: 2px 2px;
+}
+textarea{
+    width:12rem;
+    height:8rem;
+    color:#0c7481;
+    background:#fff;
+    box-shadow: 2px 2px;
+}
+.button{
+    display: flex;
+    justify-content: center;
+}
+.push{
+    color:#fff;
+    background:#00bcd5;
+    width:12rem;
+    height:2rem;
+    border-radius: 10%;
+}
+
+section{
+    background: #06AFC3;
+}
+
+
+@media screen and (min-width: 800px) {
+    .l-main-ham {
+        display: none;
+    }
+
+    .l-main-nav {
+        display: block;
+    }
+
+    .l-main-nav ul {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 20vh;
+    }
+
+    .l-main-nav li {
+        display: inline-block;
+    }
+
+    .l-main-nav a {
+        border: 1px solid black;
+    }
+
+    .l-main-nav a:hover {
+        background: lightcoral;
+    }
+    .l-main-article{
+        display:flex;
+        align-items: center;
+        justify-content: space-around;
+        align-content: space-around;
+        width:100%;
+    }
+    section{
+        display: flex;
+        justify-content: space-around;
+    }
+}
